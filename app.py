@@ -7,7 +7,7 @@ import numpy as np
 @st.cache_resource
 def load_model():
     try:
-        return joblib.load('random_forest_diabetes_predictor_model_v2.pkl')
+        return joblib.load('random_forest_diabetes_predictor_model_v3.pkl')
     except FileNotFoundError:
         return None
 
@@ -187,4 +187,5 @@ else:
                     }
                 </style>
                 """, unsafe_allow_html=True)
+
             st.progress(int((1-probability)*100))
